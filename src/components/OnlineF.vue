@@ -1,21 +1,20 @@
 <template>
     <div>
-    <h2>Online Freinds</h2>  
-    <div v-for="(onlinepeeps, index) in f" :key="index">
-        <span v-if="onlinepeeps.online == 1">{{onlinepeeps.name}}</span>
+    <h2>You are using a if statment in this component</h2>  
+    <div v-for="(f, index) in f" :key="index">
+        <!-- an if statment -->
+         <span v-if="f.online == 1">{{f.name}}</span>
         </div>  
     </div>
 </template>
 <script>
 export default {
     name: 'OnlineF',
+        //you have to bind the data, you have to add the props
+props: ['f'],
     data() {
         return {
-      f: [
-          {name:"chad",online:0},
-          {name:"steve",online:1},
-          {name:"mike",online:0}
-      ]     
+         
 
         }
     }

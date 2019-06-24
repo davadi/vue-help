@@ -1,17 +1,16 @@
 <template>
     <div>
         <nav>
-            <div>
-
-                <router-link to="">
-<span>hi im a linke</span>
-                </router-link>
-            <a href="#">
-                <router-link to="">
-<span>link2</span>
-                </router-link>
-            </a>
-            </div>
+           <div class="nav-content">
+        <router-link :to="{ name: 'Index' }">
+          <span class="nav-title">Ninja Smoothies </span>
+        </router-link>
+        <a href="" class="btn-floating btn-large halfway-fab pink">
+          <router-link :to="{ name: 'AddSmoothie' }">
+            <i class="material-icons">add</i>
+          </router-link>
+        </a>
+      </div>
         </nav>
     </div>
 </template>
